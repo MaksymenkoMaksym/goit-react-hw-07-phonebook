@@ -7,6 +7,7 @@ export const Label = styled.label`
 `;
 export const Span = styled.span`
   display: block;
+  font-weight: 700;
   margin-bottom: 10px;
 `;
 

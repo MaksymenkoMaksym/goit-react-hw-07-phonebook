@@ -8,16 +8,19 @@ const ContactsList = ({ contacts, onClickDelete }) => {
     return <p>No any data</p>;
   }
   return (
-    <Ul>
-      {contacts.map(contact => (
-        <Li key={contact.id}>
-          {contact.name}: {contact.number}
-          <Button type="button" onClick={() => onClickDelete(contact.id)}>
-            Delete
-          </Button>
-        </Li>
-      ))}
-    </Ul>
+    <>
+      <Ul>
+        {contacts.map(contact => (
+          <Li key={contact.id}>
+            {contact.name}:
+            <span style={{ margin: '0 200px 0 auto' }}>{contact.phone}</span>
+            <Button type="button" onClick={() => onClickDelete(contact.id)}>
+              Delete
+            </Button>
+          </Li>
+        ))}
+      </Ul>
+    </>
   );
 };
 
